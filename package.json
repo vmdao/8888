@@ -1,0 +1,25 @@
+{
+  "name": "8gb",
+  "version": "1.0.0",
+  "description": "My draf for 8gb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/less/bin/lessc --clean-css assets/styles/less/main.less assets/styles/build.css",
+    "gulp": "gulp views"
+  },
+  "author": "“Minh <“vuminhdao@outlook.com”> (“vuminhdao.info”)",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
+    "gulp-pug": "^3.3.0",
+    "run-sequence": "^2.1.0"
+  },
+  "dependencies": {
+    "gulp-twig": "^0.7.0",
+    "pug": "^2.0.0-rc.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
