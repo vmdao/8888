@@ -1,0 +1,51 @@
+{% extends "../layouts/main.layout.twig" %}
+{% block head %}
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDJRxPhBGSRYoWHnzadxlaeJeldZbLass&callback=initMap">
+</script>
+{% endblock %} 
+{% block content %} {% set subPage = true %} {% set title = "Contact Us" %}
+<div class="ui container content">
+    <div class="ui grid stackable two column">
+        <div class="column">
+            <form class="ui form centered form-contact">
+                <div class="sixteen wide tablet ten wide tablet ten wide computer column field">
+                    <label>Name</label>
+                    <input type="text" name="first-name" placeholder="First Name">
+                </div>
+                <div class="sixteen wide tablet ten wide computer column field">
+                    <label>Company</label>
+                    <input type="text" name="last-name" placeholder="Last Name">
+                </div>
+                <div class="sixteen wide tablet ten wide computer column field">
+                    <label>Phone</label>
+                    <input type="text" name="last-name" placeholder="Last Name">
+                </div>
+                <div class="sixteen wide tablet ten wide computer column field">
+                    <label>Message</label>
+                    <textarea type="checkbox" tabindex="0" class="hidden" rows="4"> </textarea>
+                </div>
+                <div class="sixteen wide tablet ten wide computer column field">
+                    <button class="ui button" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="ui column">
+            <div class="sixteen wide tablet ten wide tablet ten wide computer column field">
+                <div class="ui massive breadcrumb breadcrumb-custom">
+                    <a class="section">Location</a>
+                    <i class="angle right icon"></i>
+                     1°18'10.7"N 103°51'10.6"E
+                </div>
+                <div class="box-google-map" id="8gb-map">
+                </div>
+                <div class="box-address-detail">
+                    <p>Address:
+                        <br> 1 Rochor Canal Road Sim Lim Square
+                        <br> #06-14A Singapore 188504
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

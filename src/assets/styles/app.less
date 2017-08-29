@@ -1,0 +1,182 @@
+.container-custom {
+	width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	.overlay-video {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: #000428;
+		background: -webkit-linear-gradient(to right, #004e92, #000428);
+		background: linear-gradient(to right, #004e92, #000428);
+		opacity: 0.5;
+	}
+	.media-video {
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+.jumbotron {
+	.header.jumbotron-title {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		color: @color_1;
+		font-size: 5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		word-spacing: 4px;
+	}
+}
+
+.contactus-image {
+	background-image: url(semantic/image/rock.jpg);
+	height: 100vh;
+}
+
+.pin-bottom-right {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+}
+
+.pin-link-follow {
+	float: right;
+	color: @color_1;
+}
+
+.pin-top-right {
+	position: absolute;
+	right: 0;
+	top: 55px;
+	width: 270px;
+}
+
+.pin-weather {
+	float: right;
+	color: @color_1;
+	width: 100%;
+}
+
+.weather-temp {
+	font-size: 2.5em;
+	text-align: right;
+	margin-left: -28px;
+}
+
+i.huge.icon.weather-icon {
+	font-size: 5em;
+	line-height: 0.5;
+}
+
+.weather-location {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+
+canvas.weather-icon {
+	width: 120px;
+}
+
+.ui.four.cards {
+	>.card {
+		width: calc(22% - 1.5em);
+		margin-left: 0.75em;
+		margin-right: 5.75em;
+	}
+}
+
+.ui.card {
+	>.image {
+		width: 234px;
+		height: 100px;
+	}
+}
+
+.ui.cards {
+	>.card {
+		>.image {
+			width: 234px;
+			height: 100px;
+		}
+	}
+}
+
+.content {
+	margin-top: 40px;
+}
+
+.box-partner{
+	position: absolute;
+	bottom: 60px;
+	margin-left: 75px; 
+	.list-partner{
+		list-style: none;
+		&:after {
+			content: ".";
+			visibility: hidden;
+			display: block; 
+			clear: both;
+		}
+		>.list-item{
+			float: left;
+			margin-right: 60px; 
+			>img{
+				width: 170px;
+			}
+		}
+	}
+}
+
+.form.form-contact{
+	.button{
+		background: none;
+		border: 1px solid #fff;
+		color: #fff;
+		border-radius: 0; 
+	}
+	.field{
+		margin-left: auto;
+		margin-right: auto;  
+		>label{
+			color: #fff;
+			font-size: 1rem;
+		}
+		>input, >textarea{
+			background: none;
+			border: 1px solid #fff;
+			color: #fff;
+			border-radius: 0; 
+			&:focus{
+				background: none;
+				color: #fff;
+				border-radius: 0; 
+			}
+		}
+	}
+}
+
+.box-google-map{
+	width: 100%;
+	height: 300px;
+	background: #fff;
+}
+
+.box-address-detail{
+	>p{
+		color: 	#a4acea
+	}
+}

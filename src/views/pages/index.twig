@@ -1,0 +1,29 @@
+{% extends "../layouts/main.layout.twig" %} {% block content %}
+{% block head %} 
+    <script src="assets/scripts/skycon.js" async></script>
+{% endblock %}
+{% set subPage = false %}
+{% set title = "Contact Us" %} 
+<div class="ui container-custom pin-top-right">
+    <div class="pin-weather">
+        <div class="weather">
+            <canvas class="weather-icon partly-cloudy-night"></canvas>
+            <span class="weather-temp"><strong>32</strong>C</span>
+        </div>
+        <div class="weather-location">Singapore</div>
+    </div>
+</div>
+<div class="ui container">
+<div class="jumbotron">
+    <h1 class="ui header jumbotron-title">8 GB <br>TECHNOLOGIES</h1>
+    <button class="ui blue button" href="#">Get Web Audit</a>
+    </div> 
+</div> 
+<div class="ui container-custom pin-bottom-right">
+    <h3 class="pin-link-follow">
+        Follow us on das
+        <a href="https://www.facebook.com/8gbtechnologies"><i class="big facebook icon"></i></a>
+        <a href=""><i class="big google plus icon"></i></a>
+    </h3>
+</div>
+{% endblock %}

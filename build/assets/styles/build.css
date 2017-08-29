@@ -1,0 +1,295 @@
+.container-custom {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.bg-video .overlay-video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+  opacity: 0.5;
+}
+.bg-video .media-video {
+  min-width: 100%;
+  min-height: 100%;
+}
+.jumbotron .header.jumbotron-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+.contactus-image {
+  background-image: url(semantic/image/rock.jpg);
+  height: 100vh;
+}
+.pin-bottom-right {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+.pin-link-follow {
+  float: right;
+  color: #fff;
+}
+.pin-top-right {
+  position: absolute;
+  right: 0;
+  top: 55px;
+  width: 270px;
+}
+.pin-weather {
+  float: right;
+  color: #fff;
+  width: 100%;
+}
+.weather-temp {
+  font-size: 2.5em;
+  text-align: right;
+  margin-left: -28px;
+}
+i.huge.icon.weather-icon {
+  font-size: 5em;
+  line-height: 0.5;
+}
+.weather-location {
+  font-size: 1.5em;
+  text-align: center;
+}
+canvas.weather-icon {
+  width: 120px;
+}
+.ui.four.cards > .card {
+  width: calc(20.5%);
+  margin-left: 0.75em;
+  margin-right: 5.75em;
+}
+.ui.card > .image {
+  width: 234px;
+  height: 100px;
+}
+.ui.cards > .card > .image {
+  width: 234px;
+  height: 100px;
+}
+.content {
+  margin-top: 40px;
+}
+.box-partner {
+  position: absolute;
+  bottom: 60px;
+  margin-left: 75px;
+}
+.box-partner .list-partner {
+  list-style: none;
+}
+.box-partner .list-partner:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+.box-partner .list-partner > .list-item {
+  float: left;
+  margin-right: 60px;
+}
+.box-partner .list-partner > .list-item > img {
+  width: 170px;
+}
+.form.form-contact .button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0;
+}
+.form.form-contact .field {
+  margin-left: auto;
+  margin-right: auto;
+}
+.form.form-contact .field > label {
+  color: #fff;
+  font-size: 1rem;
+}
+.form.form-contact .field > input,
+.form.form-contact .field > textarea {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 0;
+}
+.form.form-contact .field > input:focus,
+.form.form-contact .field > textarea:focus {
+  background: none;
+  color: #fff;
+  border-radius: 0;
+}
+.box-google-map {
+  width: 100%;
+  height: 300px;
+  background: #fff;
+}
+.box-address-detail > p {
+  color: #a4acea;
+}
+.nav-menu {
+  margin-top: 15px;
+}
+.ui.button.dropdown.hamburger-menu {
+  background: transparent;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.ui.button.dropdown.hamburger-menu:hover {
+  background: transparent;
+}
+.ui.button.dropdown.hamburger-menu .hamberger-button {
+  width: 50px;
+  height: 35px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.ui.button.dropdown.hamburger-menu .hamberger-button span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.ui.button.dropdown.hamburger-menu .hamberger-button span:nth-child(1) {
+  top: 0px;
+}
+.ui.button.dropdown.hamburger-menu .hamberger-button span:nth-child(2) {
+  top: 13px;
+}
+.ui.button.dropdown.hamburger-menu .hamberger-button span:nth-child(3) {
+  top: 26px;
+}
+.ui.button.dropdown.hamburger-menu.active .hamberger-button span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.ui.button.dropdown.hamburger-menu.active .hamberger-button span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+.ui.button.dropdown.hamburger-menu.active .hamberger-button span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.ui.button.dropdown.hamburger-menu .menu {
+  border-radius: 0 !important;
+}
+.ui.button.dropdown.hamburger-menu .menu .menu {
+  border-radius: 0 !important;
+}
+.ui.button.dropdown.hamburger-menu .menu > .divider {
+  border-top: 1px solid #040608;
+}
+.ui.button.dropdown.hamburger-menu .menu > .header {
+  padding: .1rem 0.5rem !important;
+  margin: 0.5rem 0 .75rem;
+  margin-bottom: 0.2rem;
+  font-size: .928571429em;
+  text-transform: uppercase;
+  color: #000;
+}
+.ui.button.dropdown.hamburger-menu .menu > .item {
+  padding: .58571429rem 0.5rem !important;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.ui.breadcrumb.breadcrumb-custom {
+  vertical-align: middle;
+  color: #fff !important;
+  line-height: 1.4285em;
+}
+.ui.breadcrumb.breadcrumb-custom a {
+  color: #fff !important;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.ui.breadcrumb.breadcrumb-custom i.icon {
+  font-size: 1.5em;
+  vertical-align: sub;
+}
+@media only screen and (max-width: 723px) {
+  .container-custom {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .box-partner .list-partner > .list-item > img {
+    width: 80px;
+  }
+}
+@media only screen and (min-width: 723px) {
+  .ui.form .ten.wide.field {
+    width: 70.5% !important;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .ui.form .ten.wide.field {
+    width: 65% !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .jumbotron .header.jumbotron-title {
+    margin-top: 85px;
+    font-size: 3.5rem;
+  }
+  .pin-top-right {
+    top: 16px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .jumbotron .header.jumbotron-title {
+    margin-top: 95px;
+    font-size: 2.3rem;
+  }
+  .pin-top-right {
+    top: 16px;
+    width: 215px;
+  }
+}
