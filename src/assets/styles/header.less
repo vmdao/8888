@@ -11,8 +11,8 @@
 		background: transparent;
     }
     .hamberger-button{
-        width: 40px;
-        height: 35px;
+        width: 33px;
+        height: 24px;
         position: relative;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -26,7 +26,7 @@
         span {
             display: block;
             position: absolute;
-            height: 4px;
+            height: 3px;
             width: 100%;
             background: #fff;
             opacity: 1;
@@ -43,10 +43,10 @@
                 top: 0px;
             }
             &:nth-child(2) {
-                top: 13px;
+                top: 10px;
             }
             &:nth-child(3) {
-                top: 26px;
+                top: 20px;
             }
         }
     }
@@ -54,7 +54,7 @@
         .hamberger-button {
             span {
                 &:nth-child(1) {
-                    top: 18px;
+                    top: 10px;
                     -webkit-transform: rotate(135deg);
                     -moz-transform: rotate(135deg);
                     -o-transform: rotate(135deg);
@@ -65,7 +65,7 @@
                     left: -60px;
                 }
                 &:nth-child(3) {
-                    top: 18px;
+                    top: 10px;
                     -webkit-transform: rotate(-135deg);
                     -moz-transform: rotate(-135deg);
                     -o-transform: rotate(-135deg);
@@ -76,9 +76,10 @@
     }
 
     .menu {
-		border-radius: 0 !important;
+        border-radius: 0 !important;        
 		.menu {
-			border-radius: 0 !important;
+            left: 108%;        
+            border-radius: 0 !important;
 		}
 		>.divider {
 			border-top: 1px solid rgba(4, 6, 8, 1);
@@ -98,21 +99,18 @@
             color: #000;
 		}
     }
-    
-    
 }
 
-.ui.breadcrumb.breadcrumb-custom {
+.ui.breadcrumb.breadcrumb-custom{
     vertical-align: middle;    
     color: @color_1 !important;
     line-height: 1.4285em;
+    
 	a {
 		color: @color_1 !important;
         vertical-align: middle;
-        text-transform: uppercase;        
+        text-transform: uppercase;
+        font-size: 1.69rem;      
 	}
-	i.icon {
-        font-size: 1.5em;
-        vertical-align: sub;
-	}
+	
 }

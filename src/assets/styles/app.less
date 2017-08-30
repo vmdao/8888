@@ -100,23 +100,23 @@
 }
 
 
-.ui.cards {
-	justify-content: center; 
-	&.four{
+.ui.four.cards {
+	justify-content: start;
+	margin-left: 0em; 
 		>.card {
-			width: 14.5em;
+			&:first-child{
+				margin-left: 0em;
+			}
+			width: 10.5em;
 			margin-left: 3em;
 			margin-right: 3em;
 			border-radius: 0;
 			>.image {
-				width: 14.5em;
-				height: 7.2em;
+				width: 10.5em;
+				height: 5.2em;
 			}
 		}
-	}	
 }
-
-
 
 .box-partner{
 	position: absolute;
@@ -175,7 +175,7 @@
 	.location-title{
 		color: #fff !important;
 		vertical-align: middle;
-		font-size: 1.4rem;		
+		font-size: 1.45rem;		
 		.location-label{
 			color: #fff;
 		}
@@ -201,5 +201,29 @@
 				float: left; 
 			}
 		}
+	}
+}
+
+i.angle.down.icon{
+	background:  url(/assets/images/icons/down-arrow.svg) no-repeat center center ; 
+	width: 0.9em;
+    height: 0.9em;
+	margin-left: 15px;
+	font-size: 1.5em;
+	vertical-align: -webkit-baseline-middle; 
+	&::before{
+		content: "";
+	}
+}
+
+i.angle.right.icon{
+	background:  url(/assets/images/icons/right-arrow.svg) no-repeat center center ; 
+	width: 0.9em;
+    height: 0.9em;
+    margin-left: 15px;
+    font-size: 1.4em;
+    vertical-align: middle;
+	&::before{
+		content: "";
 	}
 }
