@@ -1,8 +1,7 @@
-$('.ui.dropdown').dropdown('hide');
-$(".ui.dropdown").dropdown({transition: 'fade down' });
-skycons('partly-cloudy-night');
 $(document).ready(function () {
     getLocation();
+    $('.ui.dropdown').dropdown('hide');
+    skycons('partly-cloudy-night');
 })
 
 function weatherReport(callback, latitude, longitude, timezone, lang) {
