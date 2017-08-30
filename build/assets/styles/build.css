@@ -26,6 +26,10 @@
   min-width: 100%;
   min-height: 100%;
 }
+.content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 .jumbotron .header.jumbotron-title {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -40,65 +44,64 @@
   background-image: url(semantic/image/rock.jpg);
   height: 100vh;
 }
-.pin-bottom-right {
+.pin-right {
   position: absolute;
   right: 0;
+  margin-right: 35px;
+}
+.pin-bottom {
+  position: absolute;
   bottom: 20px;
 }
-.pin-link-follow {
+.pin-top {
+  position: absolute;
+  top: 30px;
+}
+.pin-link .link-follow {
   float: right;
   color: #fff;
 }
-.pin-top-right {
-  position: absolute;
-  right: 0;
-  top: 55px;
-  width: 270px;
-}
-.pin-weather {
-  float: right;
+.pin-weather .weather-live {
   color: #fff;
   width: 100%;
 }
-.weather-temp {
-  font-size: 2.5em;
+.pin-weather .weather-live .weather-status {
   text-align: right;
-  margin-left: -28px;
 }
-i.huge.icon.weather-icon {
-  font-size: 5em;
-  line-height: 0.5;
+.pin-weather .weather-live .weather-status .weather-temp {
+  font-size: 2.5em;
 }
-.weather-location {
+.pin-weather .weather-live .weather-status canvas.weather-icon {
+  width: 120px;
+  margin-right: -20px;
+}
+.pin-weather .weather-live .weather-location {
+  margin-top: 10px;
   font-size: 1.5em;
   text-align: center;
+  padding-left: 30px;
 }
-canvas.weather-icon {
-  width: 120px;
+.ui.cards {
+  justify-content: center;
 }
-.ui.four.cards > .card {
-  width: calc(20.5%);
-  margin-left: 0.75em;
-  margin-right: 5.75em;
+.ui.cards.four > .card {
+  width: 14.5em;
+  margin-left: 3em;
+  margin-right: 3em;
+  border-radius: 0;
 }
-.ui.card > .image {
-  width: 234px;
-  height: 100px;
-}
-.ui.cards > .card > .image {
-  width: 234px;
-  height: 100px;
-}
-.content {
-  margin-top: 40px;
+.ui.cards.four > .card > .image {
+  width: 14.5em;
+  height: 7.2em;
 }
 .box-partner {
   position: absolute;
   bottom: 60px;
-  margin-left: 75px;
+  margin-left: 57px;
 }
 .box-partner .list-partner {
   list-style: none;
+  padding: 0;
 }
 .box-partner .list-partner:after {
   content: ".";
@@ -108,10 +111,13 @@ canvas.weather-icon {
 }
 .box-partner .list-partner > .list-item {
   float: left;
-  margin-right: 60px;
+  margin-right: 35px;
 }
 .box-partner .list-partner > .list-item > img {
-  width: 170px;
+  width: 150px;
+}
+.form.form-contact {
+  margin-top: 20px;
 }
 .form.form-contact .button {
   background: none;
@@ -140,13 +146,33 @@ canvas.weather-icon {
   color: #fff;
   border-radius: 0;
 }
-.box-google-map {
+.location-map .location-title {
+  color: #fff !important;
+  vertical-align: middle;
+  font-size: 1.4rem;
+}
+.location-map .location-title .location-label {
+  color: #fff;
+}
+.location-map .box-google-map {
+  margin-top: 30px;
   width: 100%;
   height: 300px;
   background: #fff;
 }
-.box-address-detail > p {
-  color: #a4acea;
+.location-map .box-address-detail {
+  margin-top: 15px;
+}
+.location-map .box-address-detail .address-detail {
+  color: #ffffff;
+}
+.location-map .box-address-detail .address-detail label {
+  float: left;
+  margin-right: 10px;
+}
+.location-map .box-address-detail .address-detail address {
+  font-style: normal;
+  float: left;
 }
 .nav-menu {
   margin-top: 15px;
@@ -155,12 +181,13 @@ canvas.weather-icon {
   background: transparent;
   vertical-align: middle;
   margin-right: 5px;
+  margin-left: -0.78571429em;
 }
 .ui.button.dropdown.hamburger-menu:hover {
   background: transparent;
 }
 .ui.button.dropdown.hamburger-menu .hamberger-button {
-  width: 50px;
+  width: 40px;
   height: 35px;
   position: relative;
   -webkit-transform: rotate(0deg);
@@ -254,42 +281,68 @@ canvas.weather-icon {
   font-size: 1.5em;
   vertical-align: sub;
 }
-@media only screen and (max-width: 723px) {
+@media (min-height: 200px) and (max-height: 600px) {
+  .box-partner {
+    bottom: 15px;
+  }
+}
+@media (max-width: 576px) {
   .container-custom {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
-  .box-partner .list-partner > .list-item > img {
-    width: 80px;
-  }
-}
-@media only screen and (min-width: 723px) {
-  .ui.form .ten.wide.field {
-    width: 70.5% !important;
-  }
-}
-@media only screen and (min-width: 993px) {
-  .ui.form .ten.wide.field {
-    width: 65% !important;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .jumbotron .header.jumbotron-title {
-    margin-top: 85px;
-    font-size: 3.5rem;
-  }
-  .pin-top-right {
-    top: 16px;
-  }
-}
-@media only screen and (max-width: 450px) {
   .jumbotron .header.jumbotron-title {
     margin-top: 95px;
     font-size: 2.3rem;
   }
-  .pin-top-right {
+  .pin-top.pin-weather {
     top: 16px;
-    width: 215px;
+  }
+  .pin-right {
+    margin-right: 10px;
+  }
+  .box-partner .list-partner .list-item > img {
+    width: 110px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .container-custom {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  .jumbotron .header.jumbotron-title {
+    margin-top: 90px;
+    font-size: 3.2rem;
+  }
+  .box-partner .list-partner .list-item > img {
+    width: 110px;
+  }
+  .ui.form .ten.wide.field {
+    width: 90.5% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .jumbotron .header.jumbotron-title {
+    margin-top: 90px;
+    font-size: 4rem;
+  }
+  .ui.form .ten.wide.field {
+    width: 70.5% !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .ui.form .ten.wide.field {
+    width: 65.5% !important;
+  }
+  .location-map .box-google-map {
+    width: 370px;
+  }
+}
+@media (min-width: 1200px) {
+  .ui.form .ten.wide.field {
+    width: 60.5% !important;
+  }
+  .location-map .box-google-map {
+    width: 370px;
   }
 }
