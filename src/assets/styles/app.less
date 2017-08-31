@@ -27,11 +27,11 @@
 		min-height: 100%;
 	}
 }
+
 .content {
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
-
 
 .jumbotron {
 	.header.jumbotron-title {
@@ -99,7 +99,6 @@
 	}
 }
 
-
 .ui.four.cards {
 	justify-content: start;
 	margin-left: 0em; 
@@ -118,13 +117,23 @@
 		}
 }
 
-.box-partner{
+.partner-award{
 	position: absolute;
 	bottom: 60px;
-	margin-left: 57px; 
+	margin-left: 70px; 
+	.partner-title{
+		color: #fff !important;
+		vertical-align: middle;
+		font-size: 1.6rem;
+		text-transform: uppercase;		
+		.partner-label{
+			color: #fff;
+		}
+	}
 	.list-partner{
 		list-style: none;
 		padding: 0;
+		margin-top: 35px; 
 		&:after {
 			content: ".";
 			visibility: hidden;
@@ -135,7 +144,7 @@
 			float: left;
 			margin-right: 35px; 
 			>img{
-				width: 150px;
+				width: 120px;
 			}
 		}
 	}
@@ -175,7 +184,7 @@
 	.location-title{
 		color: #fff !important;
 		vertical-align: middle;
-		font-size: 1.45rem;		
+		font-size: 1.69rem;		
 		.location-label{
 			color: #fff;
 		}
@@ -204,23 +213,23 @@
 	}
 }
 
-i.angle.down.icon{
-	background:  url(/assets/images/icons/down-arrow.svg) no-repeat center center ; 
-	width: 0.9em;
-    height: 0.9em;
-	margin-left: 15px;
+.icon-down{
+	background:  url(/assets/images/icons/down-arrow.svg) no-repeat center 1px; 
+	width: 0.78em;
+    height: 0.78em;
+	margin-left: 6px;
 	font-size: 1.5em;
-	vertical-align: -webkit-baseline-middle; 
+	vertical-align: middle; 
 	&::before{
 		content: "";
 	}
 }
 
-i.angle.right.icon{
+.icon-right{
 	background:  url(/assets/images/icons/right-arrow.svg) no-repeat center center ; 
-	width: 0.9em;
-    height: 0.9em;
-    margin-left: 15px;
+	width: 0.7em;
+    height: 0.7em;
+    margin-left: 10px;
     font-size: 1.4em;
     vertical-align: middle;
 	&::before{
