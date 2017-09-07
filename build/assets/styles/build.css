@@ -243,8 +243,18 @@ body.pushable > .pusher.bg {
   width: 47%;
   margin-top: 5%;
 }
+@keyframes upTo {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
 .box-content .box-content-body.hasFeature .column.box-content-feature.image {
   width: 50%;
+  animation-name: upTo;
+  animation-duration: 2s;
 }
 .box-content .box-content-body.hasFeature .column.box-content-feature.image img {
   width: 100%;
@@ -338,6 +348,7 @@ body.pushable > .pusher.bg {
 }
 .content-service .list .item {
   width: 22em;
+  margin-top: 60px;
 }
 .content-service .list .item .image {
   width: 8em;
@@ -345,12 +356,13 @@ body.pushable > .pusher.bg {
 .content-service .list .item .header {
   color: #ffffff;
   font-size: 1.48rem;
+  margin-top: 23px;
 }
 h1.ui.header,
 h2.ui.header,
 h3.ui.header,
 h4.ui.header {
-  font-weight: normal;
+  font-weight: normal !important;
 }
 .nav-menu {
   margin-top: 15px;
@@ -496,6 +508,9 @@ h4.ui.header {
   .box-content.box-service-showoff {
     margin-bottom: 610px;
   }
+  .content-service .ui.header {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 340px) and (max-width: 576px) {
   .container-custom {
@@ -534,6 +549,9 @@ h4.ui.header {
   .box-content.box-service-showoff {
     margin-bottom: 480px;
   }
+  .content-service .ui.header {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .container-custom {
@@ -558,6 +576,9 @@ h4.ui.header {
   }
   .box-content.box-service-showoff {
     margin-bottom: 410px;
+  }
+  .content-service .ui.header {
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {

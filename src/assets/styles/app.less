@@ -270,12 +270,21 @@ body.pushable > .pusher.bg{
 				width: 47%;
 				margin-top: 5%;
 			}
+			@keyframes upTo {
+				from {margin-top: 100%}
+				to {margin-top: 0}
+			}
+
 			.column.box-content-feature.image{
 				width: 50%;
 				img{
 					width: 100%;
 				}
+				animation-name: upTo;
+				animation-duration: 2s;
 			}
+
+			
 		}
 		margin-top: 40px;
 		ol.box-content-body-list{
@@ -379,12 +388,14 @@ body.pushable > .pusher.bg{
 		margin-top: 90px;
 		.item{
 			width: 22em;
+			margin-top: 60px; 
 			.image{
 				width: 8em;
 			}
 			.header{
 				color: #ffffff;
 				font-size: 1.48rem;
+				margin-top: 23px;	 
 			}
 		}
 	} 
@@ -392,7 +403,7 @@ body.pushable > .pusher.bg{
 }
 
 h1.ui.header, h2.ui.header, h3.ui.header,h4.ui.header {
-	font-weight: normal;
+	font-weight: normal !important;
 }
 
 
