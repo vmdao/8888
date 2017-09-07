@@ -230,8 +230,11 @@ body.pushable > .pusher.bg {
   margin: 50px 67px 60px 67px;
   max-width: 1060px;
 }
-.box-content .box-content-description {
-  font-size: 1.3rem;
+.box-content h2.ui.header.box-content-title {
+  font-size: 2.23rem;
+}
+.box-content h3.ui.header.box-content-description {
+  font-size: 1.8rem;
 }
 .box-content .box-content-body {
   margin-top: 40px;
@@ -307,9 +310,16 @@ body.pushable > .pusher.bg {
   animation: pulse .9s infinite;
   color: #fff;
 }
+.box-content.box-service-showoff h1 {
+  font-size: 2.65rem;
+}
 .box-content.box-service-showoff h3 {
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 1.862rem;
+}
+.box-content.box-service-showoff h4 {
+  font-size: 1.662rem;
 }
 .box-content.box-service-showoff .cursor:after {
   content: "_";
