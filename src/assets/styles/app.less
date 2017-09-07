@@ -1,7 +1,13 @@
+@import "http://fonts.googleapis.com/css?family=Share+Tech";
+
 .container-custom {
 	width: 100%;
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+body.pushable > .pusher.bg{
+	background: linear-gradient(to right, #004e92, #000428)
 }
 
 .bg-video {
@@ -39,7 +45,7 @@
 		margin-bottom: 20px;
 		color: @color_1;
 		font-size: 5rem;
-		font-weight: 700;
+		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		word-spacing: 4px;
@@ -106,13 +112,13 @@
 			&:first-child{
 				margin-left: 0em;
 			}
-			width: 10.5em;
+			width: 15em;
 			margin-left: 3em;
 			margin-right: 3em;
 			border-radius: 0;
 			>.image {
-				width: 10.5em;
-				height: 5.2em;
+				width: 15em;
+				height: auto;
 			}
 		}
 }
@@ -133,7 +139,6 @@
 	.list-partner{
 		list-style: none;
 		padding: 0;
-		margin-top: 35px; 
 		&:after {
 			content: ".";
 			visibility: hidden;
@@ -144,7 +149,8 @@
 			float: left;
 			margin-right: 35px; 
 			>img{
-				width: 120px;
+				max-height: 80px;
+				margin: 20px 0 0 0;
 			}
 		}
 	}
@@ -200,14 +206,28 @@
 	.box-address-detail{
 		margin-top: 15px; 
 		.address-detail{
-			color: 	#ffffff;
-			label{
-				float: left;
-				margin-right: 10px;
+			&::after{
+				content: ".";
+				visibility: hidden;
+				clear: both; 
 			}
-			address{
-				font-style: normal;
-				float: left; 
+			>div{
+				float: left;
+				font-size: 0.9rem;
+				color: 	#ffffff;
+				&::after{
+					content: ".";
+					visibility: hidden;
+					clear: both; 
+				}
+				label{
+					float: left;
+					margin-right: 10px;
+				}
+				address{
+					font-style: normal;
+					float: left; 
+				}
 			}
 		}
 	}
@@ -236,3 +256,143 @@
 		content: "";
 	}
 }
+
+.box-content{
+	margin: 50px 67px 60px 67px;
+	max-width: 1060px;
+	.box-content-description{
+		font-size: 1.3rem;
+	}
+	.box-content-body{
+		&.hasFeature{
+			margin-top: 20px;
+			ol.column.box-content-body-list{
+				width: 47%;
+				margin-top: 5%;
+			}
+			.column.box-content-feature.image{
+				width: 50%;
+				img{
+					width: 100%;
+				}
+			}
+		}
+		margin-top: 40px;
+		ol.box-content-body-list{
+			text-transform: uppercase;
+			li{
+				&::before{
+					font-size: 1.8rem;
+					opacity: 1;
+				}
+			}
+		}
+		
+	}
+
+	&.box-service-showoff{
+		
+		margin-bottom: 315px;
+		@font_family_1: "Share Tech";
+		@keyframes pulse {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0.8;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		@keyframes cursor {
+			0% {
+				opacity: 0;
+			}
+			40% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+			90% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+		h1, h2, h3, h4{
+			font-family: @font_family_1, Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+			animation: pulse .9s infinite;
+			color: @color_1;
+		}
+		h3{
+			margin-top: 5px;
+			margin-bottom: 5px; 
+		}
+
+		.cursor {
+			&:after {
+				content: "_";
+				opacity: 0;
+				animation: cursor 1s infinite;
+			}
+		}
+		.sign {
+			&:before {
+				content: "> ";
+			}
+		}
+	
+		.sub-item {
+			margin: 5px 0 5px 40px; 
+		}
+
+		.inline {
+			display: inline;
+			vertical-align: bottom;
+		}
+
+		.block-icon{
+			animation: pulse .9s infinite;
+			display: none;
+			max-width: 34px;
+			img.image{
+				display: inline-block;
+				margin: 0;
+			}
+			&.icon-show{
+				display: inline-block;
+			}
+		}		
+	}
+}
+
+.content-service{
+	margin-top: 150px; 
+	text-align: center;
+	.ui.header{
+		font-size: 4rem;
+	}
+	.list{
+		margin-top: 90px;
+		.item{
+			width: 22em;
+			.image{
+				width: 8em;
+			}
+			.header{
+				color: #ffffff;
+				font-size: 1.48rem;
+			}
+		}
+	} 
+	
+}
+
+h1.ui.header, h2.ui.header, h3.ui.header,h4.ui.header {
+	font-weight: normal;
+}
+
+
