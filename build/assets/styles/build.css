@@ -456,17 +456,17 @@ h4.ui.header {
 .ui.button.dropdown.hamburger-menu .menu > .divider {
   border-top: 1px solid #040608;
 }
-.ui.button.dropdown.hamburger-menu .menu > .header {
+.ui.button.dropdown.hamburger-menu .menu > .item.header {
   padding: .1rem 0.5rem !important;
   margin: 0.5rem 0 .75rem;
   margin-bottom: 0.2rem;
-  font-size: .928571429em;
+  font-size: 1.28571429em;
   text-transform: uppercase;
   color: #000;
+  text-align: center;
 }
 .ui.button.dropdown.hamburger-menu .menu > .item {
-  padding: .58571429rem 0.5rem !important;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
 }
