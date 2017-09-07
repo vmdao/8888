@@ -271,8 +271,14 @@ body.pushable > .pusher.bg{
 				margin-top: 5%;
 			}
 			@keyframes upTo {
-				from {margin-top: 100%}
-				to {margin-top: 0}
+				from {
+					margin-top: 100%;
+					opacity: 0;
+				}
+				to {
+					margin-top: 0;
+					opacity: 1;
+				}
 			}
 
 			.column.box-content-feature.image{
@@ -388,7 +394,7 @@ body.pushable > .pusher.bg{
 		margin-top: 90px;
 		.item{
 			width: 22em;
-			margin-top: 60px; 
+			margin-bottom: 60px; 
 			.image{
 				width: 8em;
 			}

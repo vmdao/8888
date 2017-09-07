@@ -246,9 +246,11 @@ body.pushable > .pusher.bg {
 @keyframes upTo {
   from {
     margin-top: 100%;
+    opacity: 0;
   }
   to {
     margin-top: 0;
+    opacity: 1;
   }
 }
 .box-content .box-content-body.hasFeature .column.box-content-feature.image {
@@ -348,7 +350,7 @@ body.pushable > .pusher.bg {
 }
 .content-service .list .item {
   width: 22em;
-  margin-top: 60px;
+  margin-bottom: 60px;
 }
 .content-service .list .item .image {
   width: 8em;
@@ -508,6 +510,12 @@ h4.ui.header {
   .box-content.box-service-showoff {
     margin-bottom: 610px;
   }
+  .content-service {
+    margin-top: 40px;
+  }
+  .content-service .list {
+    margin-top: 20px;
+  }
   .content-service .ui.header {
     font-size: 2rem;
   }
@@ -549,6 +557,12 @@ h4.ui.header {
   .box-content.box-service-showoff {
     margin-bottom: 480px;
   }
+  .content-service {
+    margin-top: 45px;
+  }
+  .content-service .list {
+    margin-top: 20px;
+  }
   .content-service .ui.header {
     font-size: 2rem;
   }
@@ -577,8 +591,14 @@ h4.ui.header {
   .box-content.box-service-showoff {
     margin-bottom: 410px;
   }
+  .content-service {
+    margin-top: 50px;
+  }
+  .content-service .list {
+    margin-top: 20px;
+  }
   .content-service .ui.header {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
