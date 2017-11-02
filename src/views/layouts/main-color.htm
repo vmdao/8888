@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>8 GB Technologies</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/semantic.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="assets/styles/build.css"></link>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/semantic.min.js"></script>
+    {% block head %} {% endblock %}
+    
+</head>
+
+<body class="pushable">
+    <div class="pusher bg">
+        {% include "../partials/header.partial.twig" %}
+        {% block content %} {% endblock%}
+    </div>
+    <script src="assets/scripts/app.js"></script>
+</body>
+
+</html>
