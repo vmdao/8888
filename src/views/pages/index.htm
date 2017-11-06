@@ -1,32 +1,87 @@
-{% extends "../layouts/main.htm" %} {% set subPage = false %} {% set title = "Contact Us" %} {% block head %}
+{% extends "../layouts/main.htm" %} {% set subPage = false %} {% set title = "8 GB Technology" %} {% block head %}
 <script src="assets/scripts/skycon.js" async></script> {% endblock %} {% block content %}
-
-<div class="ui container">
-    <div class="jumbotron">
-        <h1 class="ui header jumbotron-title">8 GB <br>TECHNOLOGIES</h1>
-        <a class="ui blue button" href="contact-us.html">Get Web Audit</a>
-    </div> 
-</div> 
-<div class="pin-right pin-top pin-weather">
-    <div class="weather-live">
-        <div class="weather-status">
-            <canvas class="weather-icon partly-cloudy-night"></canvas>
-            <span class="weather-temp"><strong>32</strong>C</span>
+<section class="page-content page-main">
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron welcome">
+                <h1 class="display-3">8 GB
+                    <br> TECHNOLOGIES
+                </h1>
+                <a class="btn btn-primary" href="contact-us.html">Get Web Audit</a>
+            </div>
         </div>
-        <div class="weather-location">Singapore</div>
+        <div class="row justify-content-between">
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/web-development.html">
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="assets/images/feature-develop.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">WEBSITE DESIGN AND DEVELOPMENT</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/digital-marketing.html">
+
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="assets/images/feature-marketing.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">DIGITAL MARKETING</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/mobile-application.html">
+
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="assets/images/feature-mobile.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">MOBILE APPLICATION</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/web-security.html">
+
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="assets/images/feature-scurity.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">WEBSITE SECURITY</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 <div class="pin-left pin-bottom pin-link">
-    <h3 class="link-follow">
+    <h3 class="link-contact" data-toggle="modal" data-target="#modalContact">
         For Business Opportunity
-        <a href="/contact-us.html"><i class="large handshake icon"></i></a>
+        <i class="icon icon-hand-shake"></i>
     </h3>
 </div>
 <div class="pin-right pin-bottom pin-link">
     <h3 class="link-follow">
         Follow us on
-        <a href="https://www.facebook.com/8gbtechnologies"><i class="large facebook icon"></i></a>
-        <a href=""><i class="large google plus icon"></i></a>
+        <a href="https://www.facebook.com/8gbtechnologies">
+            <i class="icon icon-facebook"></i>
+        </a>
+        <a href="">
+            <i class="icon icon-google-plus"></i>
+        </a>
     </h3>
+</div>
+<div class="pin-right  pin-top pin-weather">
+    <div class="weather-live">
+        <div class="weather-status">
+            <canvas class="weather-icon partly-cloudy-night"></canvas>
+            <span class="weather-temp">
+                <span>32</span>C</span>
+        </div>
+        <div class="weather-location">Singapore</div>
+    </div>
 </div>
 {% endblock %}

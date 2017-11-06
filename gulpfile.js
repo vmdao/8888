@@ -27,7 +27,7 @@ gulp.task('script', function () {
 })
 
 gulp.task('html', function buildHTML() {
-    return gulp.src('./src/views/pages/*.twig')
+    return gulp.src('./src/views/pages/*.htm')
         .pipe(twig({
             data: {
                 title: '8GB Technologies',
@@ -54,10 +54,11 @@ gulp.task('browserSync', function () {
 
 gulp.task('watch', function () {
     gulp.watch('./src/assets/styles/*.less', ['less']);
+    gulp.watch('./src/assets/styles/pages/*.less', ['less']);
     gulp.watch('./src/assets/scripts/*.js', ['script']);
-    gulp.watch('./src/views/*/*.twig', ['html']);
-    gulp.watch('./src/views/layouts/*.twig',sync.reload);
-    gulp.watch('./src/views/partials/*.twig',sync.reload);
+    gulp.watch('./src/views/*/*.htm', ['html']);
+    gulp.watch('./src/views/layouts/*.htm',sync.reload);
+    gulp.watch('./src/views/partials/*.htm',sync.reload);
     
 })
 

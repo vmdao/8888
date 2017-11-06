@@ -1,35 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>8 GB Technologies</title>
-    <link rel="stylesheet" type="text/css" href="assets/styles/semantic.min.css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.min.css"></link>
     <link rel="stylesheet" type="text/css" href="assets/styles/build.css"></link>
-    <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/semantic.min.js"></script>
-    <script>
+     
+</head>
+
+<body>
+    <div id="page" class="page-light">
+        <header>
+    <nav class="navbar">
+        <div class="dropdown hamburger-menu">
+            <div class="hamberger-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <h2 class="dropdown-header">
+                    <a href="/">8 GB LABS</a>
+                </h2>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/contact-us.html">Contact Us</a>
+                <a class="dropdown-item" href="/mobile-application.html">Mobile</a>
+                <a class="dropdown-item" href="/web-security.html">Web Security</a>
+                <a class="dropdown-item" href="/digital-marketing.html">Digital Marketing</a>
+                <a class="dropdown-item" href="/web-development.html">Web development</a>
+                <a class="dropdown-item" href="/our-work.html">Our Price</a>
+                <a class="dropdown-item" href="blog.html">Blog</a>
+            </div>
+        </div>
+    </nav>
+</header> 
+          <script>
     function initMap() {
-        var gbLocation = { lat: 1.3030487, lng: 103.8507321 };
+        var gbLocation = {
+            lat: 1.3030487,
+            lng: 103.8507321
+        };
         var map = new google.maps.Map(document.getElementById('8gb-map'), {
             zoom: 18,
             center: gbLocation,
-            styles: [
-                {
+            styles: [{
                     "featureType": "all",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#63b5e5"
-                        }
-                    ]
+                    "stylers": [{
+                        "color": "#63b5e5"
+                    }]
                 },
                 {
                     "featureType": "all",
                     "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "gamma": 0.01
                         },
                         {
@@ -40,8 +69,7 @@
                 {
                     "featureType": "all",
                     "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "saturation": -31
                         },
                         {
@@ -58,35 +86,28 @@
                 {
                     "featureType": "all",
                     "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative",
                     "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative.country",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "color": "#12008d"
                         },
                         {
@@ -97,26 +118,21 @@
                 {
                     "featureType": "administrative.province",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative.province",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "landscape",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "lightness": "0"
                         },
                         {
@@ -130,35 +146,28 @@
                 {
                     "featureType": "landscape",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#00395c"
-                        }
-                    ]
+                    "stylers": [{
+                        "color": "#00395c"
+                    }]
                 },
                 {
                     "featureType": "landscape",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "landscape",
                     "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "saturation": 20
                         },
                         {
@@ -169,53 +178,42 @@
                 {
                     "featureType": "poi",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi.park",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi.park",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "visibility": "on"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "on"
+                    }]
                 },
                 {
                     "featureType": "poi.park",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "road",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "lightness": 10
                         },
                         {
@@ -226,8 +224,7 @@
                 {
                     "featureType": "road",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "saturation": 25
                         },
                         {
@@ -238,29 +235,23 @@
                 {
                     "featureType": "water",
                     "elementType": "all",
-                    "stylers": [
-                        {
-                            "lightness": "0"
-                        }
-                    ]
+                    "stylers": [{
+                        "lightness": "0"
+                    }]
                 },
                 {
                     "featureType": "water",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#00668d"
-                        }
-                    ]
+                    "stylers": [{
+                        "color": "#00668d"
+                    }]
                 },
                 {
                     "featureType": "water",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 }
             ]
         });
@@ -278,110 +269,95 @@
             icon: goldStar,
         });
     }
-
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDJRxPhBGSRYoWHnzadxlaeJeldZbLass&callback=initMap">
-
 </script>
-    
-</head>
 
-<body class="pushable">
-    <div class="pusher bg">
-        <div class="bg-video">
-    <div class="overlay-video"></div>
-    <video class="media-video" autoplay muted loop poster="assets/images/binary_poster.png" src="assets/videos/binary_code.mp4">
-        <source src="assets/videos/binary_code.mp4" type="video/mp4">
-        <source src="assets/videos/binary_code.webm" type="video/webm">
-    </video>
-</div>        <div class="ui container-custom nav-menu">
-    <div class="ui icon dropdown button hamburger-menu">
-        <div class="hamberger-button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="menu">
-            <a class="item header" href="/">8 GB LABS</a>
-            <div class="ui divider"></div>
-            <a class="item" href="/about-us.html">Team</a>
-            <a class="item" href="/our-work.html">Our work</a>
-            <a class="item" href="/contact-us.html">Contact Us</a>
-            <div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text"><a href="/services.html">Services</a></span>
-                <div class="menu">
-                    <a class="item" href="/digital-marketing.html">Digital Marketing</a>
-                    <a class="item" href="/web-development.html"> Web Development </a>
-                    <a class="item" href="/web-scurity.html">Web Scurity</a>
-                    <a class="item" href="/product-design.html">Product Design</a>
-                </div>
-            </div>
-            <a class="item" href="/blog.html">Blog</a>
-        </div>
-    </div>
-        <div class="ui massive breadcrumb breadcrumb-custom">
-        <a class="section">Contact Us</a>
-        <i class="icon icon-down"></i>
-    </div>
-    </div>          <div class="ui container content">
-    <div class="ui grid stackable two column">
-        <div class="column">
-            <form class="ui form form-contact">
-                <div class="sixteen wide tablet ten wide tablet ten wide computer column field">
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="">
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <label>Company</label>
-                    <input type="text" name="company" placeholder="">
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <label>Phone</label>
-                    <input type="text" name="phone" placeholder="">
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <label>Message</label>
-                    <textarea rows="4"> </textarea>
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <button class="ui button" type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div class="ui column location-map">
-            <div class="sixteen wide tablet ten wide tablet ten wide computer column field">
-                <div class="location-title">
-                    <a class="location-label">Location</a>
-                    <i class="icon icon-right"></i> 1°18'10.7"N 103°51'10.6"E
-                </div>
-                <div class="box-google-map" id="8gb-map">
-                </div>
-                <div class="box-address-detail">
-                    <div class="address-detail">
-                        <div class="address-head">
-                            <label>HeadQuarter:</label>
-                            <address> 1 Rochor Canal Road
-                                <br> Sim Lim Square
-                                <br> #06-14A Singapore 188504
-                                <br> Tel: 6266 0080
-                            </address>
+<div class="star-fall circle-green-arrow"></div>
+<section class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 mt-100 area-contact">
+                <h1 class="section-title text-color-blue">FOR ENQUIRY</h1>
+                <p class="line-red"></p>
+                <form class="col-lg-11 col-md-12 col-sm-12 contact-form">
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">NAME</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="Your name">
                         </div>
-                        <div class="address-lab">
-                            <label>Lab:</label>
-                            <address> 5001 Beach Road
-                                <br> Golden Mile Complex
-                                <br> #04-01 Singapore 199588
-                                <br> Tel: 6909 3979
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">COMPANY</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="Your company">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticService" class="col-sm-3 col-form-label text-right">SERVICE</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="staticService">
+                                <option>Mobile Application</option>
+                                <option>Website Development</option>
+                                <option>Website Marting</option>
+                                <option>Website Scurity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticMessage" class="col-sm-3 col-form-label text-right">MESSAGE</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="staticMessage" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                            <button type="submit" class="btn btn-submit">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 area-location">
+                <h1 class="section-title color-grey">OUR LOCATION</h1>
+                <div class="location-map">
+                    <div class="box-google-map" id="8gb-map">
+                    </div>
+                    <div class="box-address-detail">
+                        <div class="row address-detail-line-1 justify-content-center">  
+                            <address class="col-xl-5 col-lg-6 col-md-12 col-sm-12"> 1 ROCHOR CANAL ROAD 
+                                <br> SIM LIM S QUARE
+                                <br> #06-14A SINGAPORE 188504
                             </address>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                            </div>
+                        </div>
+                        <div class="row address-detail-line-2 justify-content-center">
+                            <address class="col-xl-5 col-lg-6 col-md-12 col-sm-12"> 5001 BEACH ROAD
+                                <br> GOLDEN MILE COMPLEX
+                                <br> #04-01 SINGAPORE 199588
+                            </address>
+                            <div class="col-xl-3 col-lg-4 col-md-12 align-self-end">
+                                <span>TEL: 6909 3979</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
     </div>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/tether.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/app.js"></script>
 </body>
 

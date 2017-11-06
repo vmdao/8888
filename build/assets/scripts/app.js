@@ -5,8 +5,25 @@
     // start
 
     $(document).ready(function () {
-        // start menu dropdown
-        $('.ui.dropdown').dropdown('hide');
+        $('#carouselProducts').on('slide.bs.carousel', function (e) {
+
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 4;
+            var totalItems = $('.carousel-item').length;
+
+            if (idx >= totalItems - (itemsPerSlide - 1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i = 0; i < it; i++) {
+                    // append slides to end
+                    if (e.direction == "left") {
+                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                    } else {
+                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                    }
+                }
+            }
+        });
 
         // start page index.html
         $('.pin-weather').length > 0 ? (skycons('partly-cloudy-night'), getLocation()) : '';
@@ -67,7 +84,9 @@
 
     function skycons(iconName) {
         if (typeof Skycons === 'undefined') return;
-        var icon = new Skycons({ color: '#ffffff' }),
+        var icon = new Skycons({
+            color: '#ffffff'
+        }),
             list = ["rain", "sleet", "snow", "wind", "fog", "cloudy", "clear-day", "clear-night", "partly-cloudy-day", "partly-cloudy-night"];
         icon.set($('.' + iconName).get(0), iconName);
         icon.play();

@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Stellar Bold';
+    src: url('../../../assets/fonts/stellar-bold.otf');
+}
+@font-face {
+    font-family: 'Stellar Regular';
+    src: url('../../../assets/fonts/stellar-regular.otf'); 
+}
+@font-face {
+    font-family: 'Stellar Light';
+    src: url('../../../assets/fonts/stellar-light.otf'); 
+}
+.page-main{
+    .jumbotron{
+        background-color: transparent;
+        color: #ffffff;
+        .display-3{
+            font-weight: 500;
+            font-family: 'Stellar Regular';
+            font-size: 70px;
+        }
+    }
+    .product-feature{
+        margin-bottom: 50px; 
+        .card{
+            padding: 20px 0px 20px 0px;
+            
+            background-color: transparent;
+            border: 1px solid rgba(149, 152, 154,0.2);
+            border-radius: 25px;
+            color: #ffffff;
+            text-align: center;
+            .card-body{
+                margin-top: 10px;
+            }
+            h2{
+                font-size: 12px;
+                font-weight: 300;
+            }
+            
+        }
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+}
+.pin-right{
+    position: absolute;	
+    right: 42px; 
+}
+
+.pin-left{
+    left: 42px; 
+}
+
+.pin-bottom {
+    position: absolute;
+    bottom: 20px;
+}
+
+.pin-top{
+    position: absolute;
+    top: 30px;
+}
+
+.pin-link {
+    color: #ffffff;
+    font-family:  'Stellar Regular';
+    h3{
+        font-size: 18px;
+    } 
+    .link-follow{
+        float: right;
+        padding: 5px;
+        color: @color_white;
+        cursor: pointer;
+    }
+}
+
+.pin-weather{
+    .weather-live {
+        color: @color_white;
+        width: 100%;
+        .weather-status{
+            text-align: right;		
+            .weather-temp {
+                font-size: 2.5em;
+            }
+            
+            canvas.weather-icon {
+                width: 120px;
+                margin-right: -20px; 
+            }
+        }
+
+        .weather-location {
+            margin-top: 10px; 
+            font-size: 1.5em;
+            text-align: center;
+            padding-left: 30px;
+        }
+    }
+}

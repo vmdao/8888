@@ -1,17 +1,17 @@
-.nav-menu {
-	margin-top: 15px;
+header {
+    margin: 20px 30px 20px 30px;
 }
-
-.ui.button.dropdown.hamburger-menu {
+.hamburger-menu {
     background: transparent;
-    vertical-align: middle;
-    margin-right: 20px;
-    margin-left: -.78571429em;
+    .dropdown-toggle:after{
+        display: none;
+    }
 	&:hover {
 		background: transparent;
     }
+
     .hamberger-button{
-        width: 33px;
+        width: 36px;
         height: 24px;
         position: relative;
         -webkit-transform: rotate(0deg);
@@ -26,9 +26,9 @@
         span {
             display: block;
             position: absolute;
-            height: 3px;
+            height: 2px;
             width: 100%;
-            background: #fff;
+            background: @color_white;
             opacity: 1;
             left: 0;
             -webkit-transform: rotate(0deg);
@@ -50,7 +50,8 @@
             }
         }
     }
-    &.active {
+
+    &.show {
         .hamberger-button {
             span {
                 &:nth-child(1) {
@@ -74,43 +75,22 @@
             }
         }
     }
-
-    .menu {
-        border-radius: 0 !important;        
-		.menu {
-            left: 108%;        
-            border-radius: 0 !important;
-		}
-		>.divider {
-			border-top: 1px solid rgba(4, 6, 8, 1);
-		}
-		>.item.header {
-			padding: .1rem 0.5rem !important;
-			margin: 0.5rem 0 .75rem;
-            margin-bottom: 0.2rem;
-            font-size: 1.28571429em;
-            text-transform: uppercase;
-            color: #000;
-            text-align: center
-		}
-		>.item {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            color: #000;
-		}
+    .dropdown-menu{
+        .dropdown-header{
+            a{
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
     }
 }
+.page-light{
+    .hamburger-menu {
+        .hamberger-button{
+            span{
+                background-color: @color_grey;
+            }
+        }
+    }
 
-.ui.breadcrumb.breadcrumb-custom{
-    vertical-align: middle;    
-    color: @color_1 !important;
-    line-height: 1.4285em;
-    
-	a {
-		color: @color_1 !important;
-        vertical-align: middle;
-        text-transform: uppercase;
-        font-size: 1.69rem;      
-	}
-	
 }

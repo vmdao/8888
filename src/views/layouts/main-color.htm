@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>8 GB Technologies</title>
-    <link rel="stylesheet" type="text/css" href="assets/styles/semantic.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="assets/styles/build.css"></link>
-    <script src="assets/scripts/jquery.min.js"></script>
-    <script src="assets/scripts/semantic.min.js"></script>
-    {% block head %} {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
+    <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="assets/styles/build.css"></link>
+    {% block head %} {% endblock %}
+
 </head>
 
-<body class="pushable">
-    <div class="pusher bg">
-        {% include "../partials/header.partial.twig" %}
+<body>
+    <div id="page" class="page-light">
+        {% include "../partials/header.htm" %} 
         {% block content %} {% endblock%}
     </div>
+    <script src="assets/scripts/jquery.min.js"></script>
+    <script src="assets/scripts/tether.min.js"></script>
+    <script src="assets/scripts/bootstrap.min.js"></script>
     <script src="assets/scripts/app.js"></script>
 </body>
 

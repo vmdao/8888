@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/less/bin/lessc --clean-css assets/styles/less/main.less assets/styles/build.css",
+    "dev": "./node_modules/less/bin/lessc --clean-css src/assets/styles/build.less build/assets/styles/build.css",
     "start": "gulp"
   },
   "author": "“Minh <“vuminhdao@outlook.com”> (“vuminhdao.info”)",

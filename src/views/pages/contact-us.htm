@@ -1,25 +1,24 @@
-{% extends "../layouts/main.htm" %} {% block head %}
+{% extends "../layouts/main-color.htm" %} {% block content %} {% set subPage = true %} {% set title = "Mobile Application"%}
 <script>
     function initMap() {
-        var gbLocation = { lat: 1.3030487, lng: 103.8507321 };
+        var gbLocation = {
+            lat: 1.3030487,
+            lng: 103.8507321
+        };
         var map = new google.maps.Map(document.getElementById('8gb-map'), {
             zoom: 18,
             center: gbLocation,
-            styles: [
-                {
+            styles: [{
                     "featureType": "all",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#63b5e5"
-                        }
-                    ]
+                    "stylers": [{
+                        "color": "#63b5e5"
+                    }]
                 },
                 {
                     "featureType": "all",
                     "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "gamma": 0.01
                         },
                         {
@@ -30,8 +29,7 @@
                 {
                     "featureType": "all",
                     "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "saturation": -31
                         },
                         {
@@ -48,35 +46,28 @@
                 {
                     "featureType": "all",
                     "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative",
                     "elementType": "all",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative.country",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "color": "#12008d"
                         },
                         {
@@ -87,26 +78,21 @@
                 {
                     "featureType": "administrative.province",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "administrative.province",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "landscape",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "lightness": "0"
                         },
                         {
@@ -120,35 +106,28 @@
                 {
                     "featureType": "landscape",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#00395c"
-                        }
-                    ]
+                    "stylers": [{
+                        "color": "#00395c"
+                    }]
                 },
                 {
                     "featureType": "landscape",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "landscape",
                     "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "saturation": 20
                         },
                         {
@@ -159,53 +138,42 @@
                 {
                     "featureType": "poi",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi.park",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "poi.park",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "visibility": "on"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "on"
+                    }]
                 },
                 {
                     "featureType": "poi.park",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 },
                 {
                     "featureType": "road",
                     "elementType": "geometry",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "lightness": 10
                         },
                         {
@@ -216,8 +184,7 @@
                 {
                     "featureType": "road",
                     "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
+                    "stylers": [{
                             "saturation": 25
                         },
                         {
@@ -228,29 +195,23 @@
                 {
                     "featureType": "water",
                     "elementType": "all",
-                    "stylers": [
-                        {
-                            "lightness": "0"
-                        }
-                    ]
+                    "stylers": [{
+                        "lightness": "0"
+                    }]
                 },
                 {
                     "featureType": "water",
                     "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#00668d"
-                        }
-                    ]
+                    "stylers": [{
+                        "color": "#00668d"
+                    }]
                 },
                 {
                     "featureType": "water",
                     "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
                 }
             ]
         });
@@ -268,67 +229,89 @@
             icon: goldStar,
         });
     }
-
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDJRxPhBGSRYoWHnzadxlaeJeldZbLass&callback=initMap">
-
 </script>
-{% endblock %} {% block content %} {% set subPage = true %} {% set title = "Contact Us" %}
-<div class="ui container content">
-    <div class="ui grid stackable two column">
-        <div class="column">
-            <form class="ui form form-contact">
-                <div class="sixteen wide tablet ten wide tablet ten wide computer column field">
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="">
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <label>Company</label>
-                    <input type="text" name="company" placeholder="">
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <label>Phone</label>
-                    <input type="text" name="phone" placeholder="">
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <label>Message</label>
-                    <textarea rows="4"> </textarea>
-                </div>
-                <div class="sixteen wide tablet ten wide computer column field">
-                    <button class="ui button" type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div class="ui column location-map">
-            <div class="sixteen wide tablet ten wide tablet ten wide computer column field">
-                <div class="location-title">
-                    <a class="location-label">Location</a>
-                    <i class="icon icon-right"></i> 1°18'10.7"N 103°51'10.6"E
-                </div>
-                <div class="box-google-map" id="8gb-map">
-                </div>
-                <div class="box-address-detail">
-                    <div class="address-detail">
-                        <div class="address-head">
-                            <label>HeadQuarter:</label>
-                            <address> 1 Rochor Canal Road
-                                <br> Sim Lim Square
-                                <br> #06-14A Singapore 188504
-                                <br> Tel: 6266 0080
-                            </address>
+
+<div class="star-fall circle-green-arrow"></div>
+<section class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 mt-100 area-contact">
+                <h1 class="section-title text-color-blue">FOR ENQUIRY</h1>
+                <p class="line-red"></p>
+                <form class="col-lg-11 col-md-12 col-sm-12 contact-form">
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">NAME</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="Your name">
                         </div>
-                        <div class="address-lab">
-                            <label>Lab:</label>
-                            <address> 5001 Beach Road
-                                <br> Golden Mile Complex
-                                <br> #04-01 Singapore 199588
-                                <br> Tel: 6909 3979
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">COMPANY</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="Your company">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticService" class="col-sm-3 col-form-label text-right">SERVICE</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="staticService">
+                                <option>Mobile Application</option>
+                                <option>Website Development</option>
+                                <option>Website Marting</option>
+                                <option>Website Scurity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticMessage" class="col-sm-3 col-form-label text-right">MESSAGE</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="staticMessage" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                            <button type="submit" class="btn btn-submit">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 area-location">
+                <h1 class="section-title color-grey">OUR LOCATION</h1>
+                <div class="location-map">
+                    <div class="box-google-map" id="8gb-map">
+                    </div>
+                    <div class="box-address-detail">
+                        <div class="row address-detail-line-1 justify-content-center">  
+                            <address class="col-xl-5 col-lg-6 col-md-12 col-sm-12"> 1 ROCHOR CANAL ROAD 
+                                <br> SIM LIM S QUARE
+                                <br> #06-14A SINGAPORE 188504
                             </address>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                            </div>
+                        </div>
+                        <div class="row address-detail-line-2 justify-content-center">
+                            <address class="col-xl-5 col-lg-6 col-md-12 col-sm-12"> 5001 BEACH ROAD
+                                <br> GOLDEN MILE COMPLEX
+                                <br> #04-01 SINGAPORE 199588
+                            </address>
+                            <div class="col-xl-3 col-lg-4 col-md-12 align-self-end">
+                                <span>TEL: 6909 3979</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
