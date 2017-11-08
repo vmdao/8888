@@ -15,14 +15,21 @@ html, body{
 .text-color-blue{
 	color: #222E62 !important;
 }
+.text-color-grey{
+	color: @color_grey !important;
+}
 .color-grey{
-	color: @color_grey;
+	background-color: @color_grey !important; 
 }
 .display-11{
 	font-size: 15px;
 }
 .display-30{
 	font-size: 30px;
+}
+.badge-secondary{
+	color: #ffffff;
+	background-color: @color_grey; 
 }
 @keyframes upTo {
 	from {
@@ -35,7 +42,7 @@ html, body{
 	}
 }
 #page{
-	position: relative;
+
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
@@ -46,6 +53,12 @@ html, body{
     transition: transform .5s ease,-webkit-transform .5s ease;
     z-index: 2;
 }
+footer{
+	border-top: 1px solid @color_grey;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 50px;
+}
 .bg-video {
 	position: absolute;
 	top: 0;
@@ -55,19 +68,26 @@ html, body{
 	z-index: -1;
 	height: 100%;
 	.overlay-video {
-		height: 100%;
-		width: 100%;
-		position: absolute;
+		position: fixed;
 		top: 0px;
 		left: 0px;
+		right: 0;
+		bottom: 0;
 		background: #000428;
 		background: -webkit-linear-gradient(to right, #004e92, #000428);
 		background: linear-gradient(to right, #004e92, #000428);
 		opacity: 0.5;
 	}
 	.media-video {
+		position: fixed;
+		top: 50%;
+		left: 50%;
 		min-width: 100%;
 		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		transform: translate(-50%, -50%);
 	}
 }
 .page-content{
@@ -209,13 +229,50 @@ html, body{
 		}
 	}
 	&.page-blog{
-		.posts{
+		.post-feature-bg{
+			width: 100%;
+			height: 400px;
+		}
+		.post-categories{
+			margin-bottom: 30px;
+			a{
+				margin-right: 5px; 
+			} 
+		}
+		.post-list{
 			.post{
-				margin-bottom: 30px; 
+				margin-bottom: 30px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+				.post-feature {
+					width: auto;
+					left: 50%;
+					position: relative;
+					transform: translateX(-50%);
+				}
 			}
 		}
 		.card-body{
 			padding: 1.25rem;
+		}
+		.post-content{
+			margin-top: 30px;
+			.post-title{
+				margin-top: 30px;
+				border-top: 1px solid @color_grey;  
+			}
+			.post-feature{
+				height: 250px;
+			}
+		}
+		.addthis_inline_follow_toolbox{
+			.at-follow-tbx-element{
+				p{
+					display: inline-block;
+				}
+			}
+			.addthis_toolbox{
+				display: inline-block;
+			}
 		}
 	}
 }

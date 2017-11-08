@@ -1,0 +1,31 @@
+title = "Category"
+url = "/blog/category/:slug"
+layout = "main-blog"
+is_hidden = 0
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "{{ :slug }}"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 4
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "category"
+postPage = "post"
+==
+
+<section class="page-content page-blog">
+    <div class="container">
+        <div class="row post-categories">
+            <div class="col-lg-10 col-sm-12 offset-lg-1">
+                <h5 class="d-inline-block"><a href="/blog/category/{{ category.slug }}" class="badge badge-secondary">{{ category.name }}</a></h5> 
+            </div>
+        </div>
+        {% partial 'blog-postlist' %}
+        {% partial 'blog-pagination' rootSlug="/blog/category" slug=currentCategorySlug %}
+    </div>
+</section>

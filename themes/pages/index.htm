@@ -1,0 +1,131 @@
+title = "Home" 
+url = "/" 
+layout = "main.htm"
+== 
+<?php
+function onHandleForm()
+{
+    $name = post('name');
+    $email = post('email');
+    $service = post('service');
+    $company = post('company');
+    $message = post('message');
+    $time = date("Y-m-d H:i:s");
+    $id = Db::table('danvu_contactform_order')->insertGetId(
+        [    
+            'name' => $name,
+            'email' =>   $email, 
+            'service' => $service,
+            'company' =>  $company,
+            'message' => $message,
+            'createdate' => $time
+        ]
+    );
+    if($id){
+        return Redirect::to('/thank-you.html?succed=true');
+    }
+    return Redirect::to('/thank-you.html?succed=false');
+}
+?> 
+== 
+
+{% put scripts %}
+<script src="{{'assets/scripts/skycon.js'|theme }}" async></script>
+{% endput %}
+
+<section class="page-content page-main">
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron welcome">
+                <h1 class="display-3">8 GB
+                    <br> TECHNOLOGIES
+                </h1>
+                <a class="btn btn-primary" href="contact-us.html">Get Web Audit</a>
+                <div class="pin-sub pin-link">
+                    <h3 class="link-contact" data-toggle="modal" data-target="#modalContact">
+                        For Business Opportunity
+                        <i class="icon icon-hand-shake"></i>
+                    </h3>
+                </div>
+            </div>
+        </div>
+       
+        <div class="row justify-content-between">
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/web-development.html">
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="{{'assets/images/feature-develop.png'|theme }}" alt="website design">
+                        <div class="card-body">
+                            <h2 class="card-text">WEBSITE DESIGN AND DEVELOPMENT</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/digital-marketing.html">
+
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="{{'assets/images/feature-marketing.png'|theme }}" alt="digital marketing">
+                        <div class="card-body">
+                            <h2 class="card-text">DIGITAL MARKETING</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/mobile-application.html">
+
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="{{'assets/images/feature-mobile.png'|theme }}" alt="mobile application">
+                        <div class="card-body">
+                            <h2 class="card-text">MOBILE APPLICATION</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="product-feature col-md-3 col-sm-6">
+                <a href="/web-security.html">
+
+                    <div class="card">
+                        <img class="card-img-top mx-auto" src="{{'assets/images/feature-scurity.png'|theme }}" alt="website security">
+                        <div class="card-body">
+                            <h2 class="card-text">WEBSITE SECURITY</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="pin-left pin-bottom pin-link pin-main">
+    <h3 class="link-contact" data-toggle="modal" data-target="#modalContact">
+        For Business Opportunity
+        <i class="icon icon-hand-shake"></i>
+    </h3>
+</div>
+<div class="pin-right pin-bottom pin-link">
+    <h3 class="link-follow">
+        Follow us on
+        <a href="https://www.facebook.com/8gbtechnologies">
+            <i class="icon icon-facebook"></i>
+        </a>
+        <a href="">
+            <i class="icon icon-google-plus"></i>
+        </a>
+    </h3>
+</div>
+<div class="pin-right  pin-top pin-weather">
+    <div class="weather-live">
+        <div class="weather-status">
+            <canvas class="weather-icon partly-cloudy-night"></canvas>
+            <span class="weather-temp">
+                <span>32</span>C</span>
+        </div>
+        <div class="weather-location">Singapore</div>
+    </div>
+</div>
+{% partial 'modalcontact' %} 
+
+
+
+      

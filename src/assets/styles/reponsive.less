@@ -1,5 +1,8 @@
 
 @media ( max-width: @smallMoblieBreakpoint) {
+	header{
+		margin: 20px 10px;
+	}
 	.page-main{
 		padding-top: 80px;
 		padding-bottom: 30px;  
@@ -7,6 +10,9 @@
 			.display-3{
 				font-size: 2.5rem; 
 			}
+		}
+		.btn-primary{
+			display: none;
 		}
 	}
 	.pin-bottom {
@@ -17,6 +23,15 @@
 	}
 	.pin-right {
 		margin-right: 10px; 
+	}
+	.pin-link{
+		&.pin-main{
+			display: none;
+		}
+		&.pin-sub{
+			display: block;
+			margin-top: 20px; 
+		}
 	}
 	.pin-top.pin-weather{
 		top: 16px;
@@ -38,6 +53,9 @@
 }
  
 @media  (min-width: @smallMoblieBreakpoint) and (max-width: @mobileBreakpoint){
+	header{
+		margin: 20px 10px;
+	}
 	.page-main{
 		padding-top: 80px;
 		padding-bottom: 30px;  
@@ -45,6 +63,9 @@
 			.display-3{
 				font-size: 3.5rem; 
 			}
+		}
+		.btn-primary{
+			display: none;
 		}
 	}
 
@@ -56,6 +77,14 @@
 	}
 	.pin-right {
 		margin-right: 10px; 
+	}
+	.pin-link{
+		&.pin-main{
+			display: none;
+		}
+		&.pin-sub{
+			display: block;
+		}
 	}
 	.pin-top.pin-weather{
 		top: 16px;
@@ -88,8 +117,6 @@
 			}
 		}
 	}
-	
-	
 }
 
 @media (min-width: @mobileBreakpoint) and (max-width: @tableBreakpoint) {

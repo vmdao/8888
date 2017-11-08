@@ -16,14 +16,21 @@ body {
 .text-color-blue {
   color: #222E62 !important;
 }
+.text-color-grey {
+  color: #95989A !important;
+}
 .color-grey {
-  color: #95989A;
+  background-color: #95989A !important;
 }
 .display-11 {
   font-size: 15px;
 }
 .display-30 {
   font-size: 30px;
+}
+.badge-secondary {
+  color: #ffffff;
+  background-color: #95989A;
 }
 @keyframes upTo {
   from {
@@ -36,7 +43,6 @@ body {
   }
 }
 #page {
-  position: relative;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
@@ -46,6 +52,12 @@ body {
   transition: transform .5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   z-index: 2;
+}
+footer {
+  border-top: 1px solid #95989A;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
 }
 .bg-video {
   position: absolute;
@@ -57,19 +69,26 @@ body {
   height: 100%;
 }
 .bg-video .overlay-video {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
+  right: 0;
+  bottom: 0;
   background: #000428;
   background: -webkit-linear-gradient(to right, #004e92, #000428);
   background: linear-gradient(to right, #004e92, #000428);
   opacity: 0.5;
 }
 .bg-video .media-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
   min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
 }
 .page-content .section-title {
   font-weight: 600;
@@ -201,11 +220,44 @@ body {
 .page-content .location-map .box-address-detail .address-detail-line-2 address {
   margin-bottom: 0;
 }
-.page-content.page-blog .posts .post {
+.page-content.page-blog .post-feature-bg {
+  width: 100%;
+  height: 400px;
+}
+.page-content.page-blog .post-categories {
   margin-bottom: 30px;
+}
+.page-content.page-blog .post-categories a {
+  margin-right: 5px;
+}
+.page-content.page-blog .post-list .post {
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.page-content.page-blog .post-list .post .post-feature {
+  width: auto;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
 }
 .page-content.page-blog .card-body {
   padding: 1.25rem;
+}
+.page-content.page-blog .post-content {
+  margin-top: 30px;
+}
+.page-content.page-blog .post-content .post-title {
+  margin-top: 30px;
+  border-top: 1px solid #95989A;
+}
+.page-content.page-blog .post-content .post-feature {
+  height: 250px;
+}
+.page-content.page-blog .addthis_inline_follow_toolbox .at-follow-tbx-element p {
+  display: inline-block;
+}
+.page-content.page-blog .addthis_inline_follow_toolbox .addthis_toolbox {
+  display: inline-block;
 }
 .btn-findout {
   border-radius: 20px;
@@ -285,6 +337,9 @@ header {
   margin: 20px 30px 20px 30px;
 }
 .hamburger-menu {
+  display: inline-block;
+  width: 36px;
+  height: 24px;
   background: transparent;
 }
 .hamburger-menu .dropdown-toggle:after {
@@ -294,6 +349,7 @@ header {
   background: transparent;
 }
 .hamburger-menu .hamberger-button {
+  display: inline-block;
   width: 36px;
   height: 24px;
   position: relative;
@@ -354,6 +410,13 @@ header {
 .hamburger-menu .dropdown-menu .dropdown-header a {
   text-decoration: none;
   font-size: 16px;
+}
+.page-name {
+  font-size: 25px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 10px;
+  color: #95989A;
 }
 .page-light .hamburger-menu .hamberger-button span {
   background-color: #95989A;
@@ -418,6 +481,10 @@ header {
 .pin-link {
   color: #ffffff;
   font-family: 'Stellar Regular';
+  cursor: pointer;
+}
+.pin-link.pin-sub {
+  display: none;
 }
 .pin-link h3 {
   font-size: 18px;
@@ -449,12 +516,18 @@ header {
   padding-left: 30px;
 }
 @media (max-width: 340px) {
+  header {
+    margin: 20px 10px;
+  }
   .page-main {
     padding-top: 80px;
     padding-bottom: 30px;
   }
   .page-main .welcome .display-3 {
     font-size: 2.5rem;
+  }
+  .page-main .btn-primary {
+    display: none;
   }
   .pin-bottom {
     position: relative;
@@ -464,6 +537,13 @@ header {
   }
   .pin-right {
     margin-right: 10px;
+  }
+  .pin-link.pin-main {
+    display: none;
+  }
+  .pin-link.pin-sub {
+    display: block;
+    margin-top: 20px;
   }
   .pin-top.pin-weather {
     top: 16px;
@@ -480,12 +560,18 @@ header {
   }
 }
 @media (min-width: 340px) and (max-width: 576px) {
+  header {
+    margin: 20px 10px;
+  }
   .page-main {
     padding-top: 80px;
     padding-bottom: 30px;
   }
   .page-main .welcome .display-3 {
     font-size: 3.5rem;
+  }
+  .page-main .btn-primary {
+    display: none;
   }
   .pin-bottom {
     position: relative;
@@ -495,6 +581,12 @@ header {
   }
   .pin-right {
     margin-right: 10px;
+  }
+  .pin-link.pin-main {
+    display: none;
+  }
+  .pin-link.pin-sub {
+    display: block;
   }
   .pin-top.pin-weather {
     top: 16px;

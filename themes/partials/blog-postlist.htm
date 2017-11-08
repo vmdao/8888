@@ -1,0 +1,22 @@
+<div class="row post-list">
+    {% set posts = blogPosts.posts %} {% for post in posts %} {% set imageFirst = post.featured_images[0] %}
+    <div class="col-lg-10 col-sm-12 offset-lg-1">
+        <div class="card post">
+            <img class="card-img-top post-feature" data-src="{{ imageFirst.filename }}" src="{{ imageFirst.path }}" alt="{{ imageFirst.description }}">
+            <div class="card-body">
+                <a href="/blog/post/{{post.slug}}">
+                    <h4 class="card-title">{{ post.title }}</h4>
+                </a>
+                <p class="card-text">{{ post.summary|raw }}</p>
+                <div class="line-red"></div>
+                <strong>{% if post.categories.count %} in {% endif %} {% for category in post.categories %}
+                    <a href="/blog/category/{{ category.slug }}">{{ category.name }}</a>
+                    {% if not loop.last %}, {% endif %} {% endfor %}</strong>
+            </div>
+        </div>
+
+    </div>
+    {% else %}
+    <li class="no-data">{{ noPostsMessage }}</li>
+    {% endfor %}
+</div>

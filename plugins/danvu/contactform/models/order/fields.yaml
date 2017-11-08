@@ -1,0 +1,43 @@
+fields:
+    name:
+        label: 'danvu.contactform::lang.contactform.name'
+        span: auto
+        type: text
+    company:
+        label: 'danvu.contactform::lang.contactform.company'
+        span: auto
+        type: text
+    email:
+        label: 'danvu.contactform::lang.contactform.email'
+        span: auto
+        required: 1
+        type: text
+    mobile:
+        label: 'danvu.contactform::lang.contactform.mobile'
+        span: auto
+        type: text
+    service:
+        label: 'danvu.contactform::lang.contactform.service'
+        span: auto
+        type: text
+    status:
+        label: 'danvu.contactform::lang.contactform.status'
+        span: auto
+        default: 0
+        type: switch
+    createdate:
+        label: 'danvu.contactform::lang.contactform.createdate'
+        mode: datetime
+        span: auto
+        default: now()
+        type: datepicker
+    description:
+        label: 'danvu.contactform::lang.contactform.description'
+        size: large
+        span: full
+        type: richeditor
+    message:
+        label: 'danvu.contactform::lang.contactform.message'
+        size: large
+        span: full
+        type: richeditor

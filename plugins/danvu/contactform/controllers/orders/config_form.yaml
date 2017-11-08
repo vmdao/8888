@@ -1,0 +1,11 @@
+name: Orders
+modelClass: DanVu\ContactForm\Models\Order
+form: ~/plugins/danvu/contactform/models/order/fields.yaml
+defaultRedirect: danvu/contactform/orders
+create:
+    redirect: 'danvu/contactform/orders/update/:id'
+    redirectClose: danvu/contactform/orders
+update:
+    redirect: danvu/contactform/orders
+    redirectClose: danvu/contactform/orders
+preview: {  }

@@ -1,0 +1,333 @@
+title = "Contact Us"
+url = "/contact-us.html"
+layout = "main-color"
+is_hidden = 0
+
+[genericForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+==
+{% put scripts %}
+<script>
+    function initMap() {
+        var gbLocation = {
+            lat: 1.3030487,
+            lng: 103.8507321
+        };
+        var map = new google.maps.Map(document.getElementById('8gb-map'), {
+            zoom: 18,
+            center: gbLocation,
+            styles: [{
+                    "featureType": "all",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#63b5e5"
+                    }]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                            "gamma": 0.01
+                        },
+                        {
+                            "lightness": 20
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                            "saturation": -31
+                        },
+                        {
+                            "lightness": -33
+                        },
+                        {
+                            "weight": 2
+                        },
+                        {
+                            "gamma": 0.8
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "all",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "administrative.country",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                            "color": "#12008d"
+                        },
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative.province",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "administrative.province",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{
+                            "lightness": "0"
+                        },
+                        {
+                            "saturation": "0"
+                        },
+                        {
+                            "color": "#ff0000"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#00395c"
+                    }]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "labels.text",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{
+                            "saturation": 20
+                        },
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "visibility": "on"
+                    }]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [{
+                            "lightness": 10
+                        },
+                        {
+                            "saturation": -30
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                            "saturation": 25
+                        },
+                        {
+                            "lightness": 25
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [{
+                        "lightness": "0"
+                    }]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#00668d"
+                    }]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }
+            ]
+        });
+        var goldStar = {
+            path: 'M11 2c-3.9 0-7 3.1-7 7 0 5.3 7 13 7 13 0 0 7-7.7 7-13 0-3.9-3.1-7-7-7Zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5 0-1.4 1.1-2.5 2.5-2.5 1.4 0 2.5 1.1 2.5 2.5 0 1.4-1.1 2.5-2.5 2.5Z',
+            fillColor: '#ffffff',
+            fillOpacity: 1,
+            scale: 0.5,
+            strokeColor: '#ffffff',
+            strokeWeight: 0
+        };
+        var marker = new google.maps.Marker({
+            position: gbLocation,
+            map: map,
+            icon: goldStar,
+        });
+    }
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDJRxPhBGSRYoWHnzadxlaeJeldZbLass&callback=initMap">
+</script>
+{% endput %}
+
+<div class="star-fall circle-green-arrow"></div>
+<section class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 mt-100 area-contact">
+                <h1 class="section-title text-color-blue">FOR ENQUIRY</h1>
+                <p class="line-red"></p>
+                <form class="col-lg-11 col-md-12 col-sm-12 contact-form">
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">NAME</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="Your name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label text-right">COMPANY</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="staticEmail" value="Your company">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticService" class="col-sm-3 col-form-label text-right">SERVICE</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="staticService">
+                                <option>Mobile Application</option>
+                                <option>Website Development</option>
+                                <option>Website Marting</option>
+                                <option>Website Scurity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticMessage" class="col-sm-3 col-form-label text-right">MESSAGE</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="staticMessage" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                            <button type="submit" class="btn btn-submit">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 area-location">
+                <h1 class="section-title text-color-grey">OUR LOCATION</h1>
+                <div class="location-map">
+                    <div class="box-google-map" id="8gb-map">
+                    </div>
+                    <div class="box-address-detail">
+                        <div class="row address-detail-line-1 justify-content-center">
+                            <address class="col-xl-5 col-lg-6 col-md-12 col-sm-12"> 1 ROCHOR CANAL ROAD
+                                <br> SIM LIM S QUARE
+                                <br> #06-14A SINGAPORE 188504
+                            </address>
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                            </div>
+                        </div>
+                        <div class="row address-detail-line-2 justify-content-center">
+                            <address class="col-xl-5 col-lg-6 col-md-12 col-sm-12"> 5001 BEACH ROAD
+                                <br> GOLDEN MILE COMPLEX
+                                <br> #04-01 SINGAPORE 199588
+                            </address>
+                            <div class="col-xl-3 col-lg-4 col-md-12 align-self-end">
+                                <span>TEL: 6909 3979</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,7 @@
+<div class="row post-categories">
+    <div class="col-lg-10 col-sm-12 offset-lg-1">
+        {% if blogCategories.categories %} {% for category in blogCategories.categories %}
+        <h5 class="d-inline-block"><a href="/blog/category/{{ category.slug }}" class="badge badge-secondary">{{ category.name }}</a></h5>
+        {% endfor %} {% endif %}
+    </div>
+</div>

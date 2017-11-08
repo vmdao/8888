@@ -1,0 +1,29 @@
+columns:
+    name:
+        label: 'danvu.contactform::lang.contactform.name'
+        type: text
+        searchable: true
+        sortable: true
+    company:
+        label: 'danvu.contactform::lang.contactform.company'
+        type: text
+        searchable: true
+        sortable: true
+    service:
+        label: 'danvu.contactform::lang.contactform.service'
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: 'danvu.contactform::lang.contactform.email'
+        type: text
+        searchable: true
+        sortable: true
+    status:
+        label: 'danvu.contactform::lang.contactform.status'
+        type: switch
+        searchable: true
+        sortable: true
+    createdate:
+        label: 'danvu.contactform::lang.contactform.createdate'
+        type: text

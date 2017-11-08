@@ -1,0 +1,13 @@
+title: Orders
+modelClass: DanVu\ContactForm\Models\Order
+list: ~/plugins/danvu/contactform/models/order/columns.yaml
+recordUrl: 'danvu/contactform/orders/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '100'
+showSetup: true
+showCheckboxes: true
+showSorting: 1
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

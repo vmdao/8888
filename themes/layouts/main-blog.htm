@@ -1,0 +1,35 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ this.page.title }} - 8 GB Technologies</title>
+    <meta name="author" content="Dan Vu - Nelson">
+    <meta name="generator" content="8GB Technology">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+    <link href="{{ 'assets/styles/bootstrap.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/styles/build.css'|theme }}" rel="stylesheet"> {% styles %}
+</head>
+
+<body>
+    <div id="page" class="page-light">
+        {% partial 'header' pageName='Blog' title=this.page.title %}
+        {% page %}
+    </div>
+    
+    <script src="{{ 'assets/scripts/jquery.min.js'|theme }}"></script>
+    <script src="{{ 'assets/scripts/tether.min.js'|theme }}"></script>
+    <script src="{{ 'assets/scripts/bootstrap.min.js'|theme }}"></script>
+    <script src="{{ 'assets/scripts/app.js'|theme }}"></script>
+    {% scripts %}
+    {% partial 'part3'%}
+    {% partial 'footer'%}
+</body>
+
+</html>

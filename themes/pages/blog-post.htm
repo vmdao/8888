@@ -1,0 +1,27 @@
+title = "Post"
+url = "/blog/post/:slug"
+layout = "main-blog"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog"
+==
+function onEnd(){
+    $this->page->title = $this['post']->title;
+}
+==
+<section class="page-content page-blog">
+    {% set post = blogPost.post %}
+    {% if post.featured_images.count %} 
+    {% set imageFirst = post.featured_images[0] %}
+    <div class="post-feature-bg" style="background-image: url({{ imageFirst.path }});">
+    </div>
+    {% endif %}
+    
+    <div class="container">
+        {% partial 'blog-post-content' %}
+        <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+        <div class="addthis_relatedposts_inline"></div>
+    </div>
+</section>

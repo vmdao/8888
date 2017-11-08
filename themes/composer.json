@@ -1,0 +1,23 @@
+{
+    "name": "8GB Theme",
+    "type": "october-theme",
+    "description": "8gb-theme",
+    "keywords": ["8gb-theme", "theme"],
+    "license": "8GB",
+    "authors": [
+        {
+            "name": "Dan Vu",
+            "email": "vuminhdao@outlook.com",
+            "role": "Co-founder"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

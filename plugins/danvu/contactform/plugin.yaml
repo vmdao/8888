@@ -1,0 +1,24 @@
+plugin:
+    name: 'danvu.contactform::lang.plugin.name'
+    description: 'danvu.contactform::lang.plugin.description'
+    author: DanVu
+    icon: oc-icon-bank
+    homepage: ''
+permissions:
+    danvu.contactform.manager:
+        tab: 'danvu.contactform::lang.plugin.name'
+        label: 'danvu.contactform::lang.contactform.manager'
+navigation:
+    manager:
+        label: 'Manager Orders'
+        url: danvu/contactform/orders
+        icon: icon-bookmark
+        permissions:
+            - danvu.contactform.manager
+        sideMenu:
+            orders:
+                label: Orders
+                url: danvu/contactform/orders
+                icon: icon-ticket
+                permissions:
+                    - danvu.contactform.manager

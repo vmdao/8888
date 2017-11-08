@@ -1,0 +1,21 @@
+<div class="row post-pagination justify-content-center">
+    {% if posts.lastPage > 1 %}
+    <nav aria-label="Page navigation example">
+        <ul class="pagination ">
+            {% if posts.currentPage > 1 %}
+            <li class="page-item">
+                <a class="page-link" href="{{ rootSlug }}{{ slug  ? '/' ~ slug : '' }}/{{ posts.currentPage-1 }}">&larr;Prev</a>
+            </li>
+            {% endif %} {% for page in 1..posts.lastPage %}
+            <li class="page-item {{ posts.currentPage == page ? 'active ' : null }}">
+                <a class="page-link {{ posts.currentPage == page ? 'color-grey' : null }}" href="{{ rootSlug }}{{ slug ? '/' ~ slug : '' }}/{{ page }}">{{ page }}</a>
+            </li>
+            {% endfor %} {% if posts.lastPage > posts.currentPage %}
+            <li class="page-item">
+                <a class="page-link" href="{{ rootSlug }}{{ slug  ? '/' ~ slug : '' }}/{{ posts.currentPage+1 }}">Next &rarr;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>

@@ -1,0 +1,30 @@
+==
+<header>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <div class="dropdown hamburger-menu">
+                <div class="hamberger-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <h2 class="dropdown-header">
+                        <a href="/">8 GB LABS</a>
+                    </h2>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/contact-us.html">Contact Us</a>
+                    <a class="dropdown-item" href="/our-work.html">Our Price</a>
+                    <a class="dropdown-item" href="/mobile-application.html">Mobile Application</a>
+                    <a class="dropdown-item" href="/web-security.html">Web Security</a>
+                    <a class="dropdown-item" href="/web-development.html">Web development</a>
+                    <a class="dropdown-item" href="/digital-marketing.html">Digital Marketing</a>
+                    <a class="dropdown-item" href="/blog">Blog</a>
+                </div>
+            </div>
+            {% if pageName %}
+            <h2 class="page-name">{{ pageName }}</h2>
+            {% endif %}
+        </div>
+    </nav>
+</header>
